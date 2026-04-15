@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+@import "tailwindcss";
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+* {
+  font-family: "Almarai", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background-color: #05070A;
+  color: #E0E0E0;
+}
+
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 188, 212, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00BCD4;
+}
+
+
+:root {
+
+  --color-main-bg: #05070A;
+  --color-sidebar-bg: rgba(13, 17, 23, 0.8);
+  --color-sidebar-border: rgba(255, 255, 255, 0.08);
+
+
+  --color-nav-bg: rgba(10, 12, 16, 0.7);
+  --color-nav-button: #00BCD4;
+
+
+  --color-text-main: #F0F0F0;
+  --color-text-highlight: #00BCD4;
+
+
+  --color-table-bg: rgba(255, 255, 255, 0.02);
+  --color-table-header: rgba(255, 255, 255, 0.05);
+  --color-border: rgba(255, 255, 255, 0.1);
+
+
+  --color-Edit-Button: #10B981;
+  --color-Delete-Button: #EF4444;
+  --color-Details-Button: #3B82F6;
+  --color-Add-Button: #00BCD4;
+
+
+  --sidebar-item-bg: transparent;
+  --sidebar-item-hover: rgba(0, 188, 212, 0.1);
+  --sidebar-text: #94A3B8;
+  --sidebar-text-hover: #00BCD4;
+  --sidebar-icon: #64748B;
+  --sidebar-icon-hover: #00BCD4;
+
+
+  --sidebar-active-bg: linear-gradient(135deg, rgba(0, 188, 212, 0.2) 0%, rgba(0, 188, 212, 0.05) 100%);
+  --sidebar-active-text: #00BCD4;
+}
+
+
+@layer utilities {
+  .bg-mainBg {
+    background-color: var(--color-main-bg);
+  }
+
+  .bg-sidebarBg {
+    background-color: var(--color-sidebar-bg);
+  }
+
+  .bg-navBg {
+    background-color: var(--color-nav-bg);
+  }
+
+  .bg-navButton {
+    background-color: var(--color-nav-button);
+  }
+
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-blur: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .text-main {
+    color: var(--color-text-main);
+  }
+
+  .text-highlight {
+    color: var(--color-text-highlight);
+  }
+
+  .sidebar-active-bg {
+    background: var(--sidebar-active-bg);
+    border-right: 3px solid var(--color-text-highlight);
+    color: var(--sidebar-active-text) !important;
+  }
+
+
+  .btn-premium {
+    @apply transition-all duration-300 active:scale-95 font-bold rounded-2xl;
+  }
+}
